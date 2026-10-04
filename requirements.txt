@@ -1,0 +1,8 @@
+# Streamlit Community Cloud deployment (slim — captions + LLM path only).
+# The full local/backend dependency set lives in backend/requirements.txt.
+streamlit>=1.37
+youtube-transcript-api>=1.0
+groq>=0.11
+fastapi>=0.111
+pydantic>=2.7
+pydantic-settings>=2.3
