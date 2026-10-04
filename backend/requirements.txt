@@ -1,0 +1,24 @@
+# --- Vision / perception module (owner: Husnain) ---
+opencv-python-headless>=4.9
+imagehash>=4.3
+Pillow>=10.0
+numpy>=1.26
+easyocr>=1.7
+
+# --- Multimodal providers (configurable via VISION_PROVIDER) ---
+groq>=0.11
+google-genai>=1.0
+
+# --- Shared ---
+pydantic>=2.7
+pydantic-settings>=2.3
+python-dotenv>=1.0
+
+# --- Transcript module: captions + ASR fallback (owner: Husnain) ---
+youtube-transcript-api>=1.0
+faster-whisper>=1.0
+av>=12,<15  # av 19 removed the metadata_errors kwarg faster-whisper relies on; 14.2.0 has Windows wheels
+
+# --- Backend app (owner: Talha) ---
+fastapi>=0.111
+uvicorn[standard]>=0.30

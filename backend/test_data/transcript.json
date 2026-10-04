@@ -1,0 +1,18 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 12.08,
+      "text": "Welcome to ClipSense. This is a test of the automatic speech recognition fallback. ClipSense turns long videos into structured summaries with chapters, key points, and timestamps.",
+      "speaker": null
+    },
+    {
+      "start": 12.96,
+      "end": 24.8,
+      "text": "The vision agent reads slides and code on screen, while the critic agent verifies every claim against the evidence. Thank you for watching this demonstration.",
+      "speaker": null
+    }
+  ],
+  "source": "faster-whisper",
+  "language": "en"
+}

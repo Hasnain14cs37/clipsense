@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": 0.0,
+    "frame_type": "other",
+    "ocr_text": "ClipSense\nMulti-Agent\nVideo Intelligence\nHackathon\nDemo\n2026",
+    "description": "",
+    "confidence": 0.921
+  },
+  {
+    "timestamp": 8.0,
+    "frame_type": "other",
+    "ocr_text": "Why ClipSense?\nLong\nvideos\nwaste\ntime\nTranscripts\nmiss\nvisuals\nClaims\nneed\nverification",
+    "description": "",
+    "confidence": 0.991
+  },
+  {
+    "timestamp": 16.0,
+    "frame_type": "other",
+    "ocr_text": "def\nsummarize(video) :\nevidence\nfuse(transcript,\nframes)\nsummary\nmap_reduce(evidence)\nreturn\ncritic.verify(summary)",
+    "description": "",
+    "confidence": 0.975
+  },
+  {
+    "timestamp": 24.0,
+    "frame_type": "other",
+    "ocr_text": "Thank You\nQuestions\nand\nAnswers\ngithub.com/clipsense",
+    "description": "",
+    "confidence": 0.991
+  }
+]

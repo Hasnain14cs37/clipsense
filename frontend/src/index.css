@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  /* ClipSense tokens — "video becomes a document":
+     light reading surface, dark filmstrip insets, playhead accent */
+  --color-ground: #edf0f3;
+  --color-ink: #121a22;
+  --color-ink-soft: #4b5663;
+  --color-line: #d4dae1;
+  --color-strip: #10151b;
+  --color-strip-soft: #1c242e;
+  --color-playhead: #ff4712;
+  --color-verified: #1e9e6a;
+  --color-caution: #c7831d;
+  --color-card: #f7f9fa;
+
+  /* track colors — every agent keeps its hue across all screens */
+  --color-ingest: #0e9bab;
+  --color-audio: #1e9e6a;
+  --color-vision: #7c3fe4;
+  --color-chapter: #2d5bff;
+  --color-critic: #e0961a;
+
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-playhead);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--color-playhead);
+  color: #fff;
+}
+
+/* --- timecode: the atom of ClipSense --- */
+.timecode {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* --- sprocket strip: film-edge motif used on dark insets --- */
+.sprockets {
+  background-image: radial-gradient(circle at 50% 50%, #2e3842 2.5px, transparent 3px);
+  background-size: 18px 100%;
+  background-repeat: repeat-x;
+  background-position: 9px 50%;
+}
+
+/* --- playhead sweep on the progress tracks --- */
+@keyframes playhead-sweep {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.blink {
+  animation: pulse-soft 1.2s ease-in-out infinite;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html {
+    background: #fff;
+  }
+}

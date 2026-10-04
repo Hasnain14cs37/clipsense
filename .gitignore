@@ -1,0 +1,18 @@
+# secrets — never commit (.env.example files are the committed templates)
+.env
+.env.local
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+backend/work/
+backend/test_data/frames/
+
+# node
+node_modules/
+dist/
+
+# local artifacts
+*.zip
+backend/transcript.json
